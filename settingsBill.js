@@ -34,14 +34,14 @@
       if (value === 'call') {
         stampMap.push({
           type: value,
-          price: getCall(),
+          price: getCallCost(),
           when: myDate,
           ago: timeAgo
         });
       } else if (value === 'sms') {
         stampMap.push({
           type: value,
-          price: getSms(),
+          price: getSmsCost(),
           when: myDate,
           ago: timeAgo
         });
