@@ -9,9 +9,11 @@
     "express-handlebars": "^3.0.0",
     "moment": "^2.22.2"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "start": "node index.js"
   },
   "repository": {
