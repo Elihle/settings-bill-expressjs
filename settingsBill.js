@@ -11,7 +11,6 @@
     let criticalB = 40;
 
     function billSettings(billType) {
-      //if (totalBills() < criticalB) {
       if (billType === 'call') {
         if (totalB < criticalB) {
           callB += callCost;
@@ -24,8 +23,7 @@
           totalB += smsCost;
         }
       }
-      //}
-      //totalB = callB + smsB;
+      totalB = callB + smsB;
     }
 
     function timeStamps(value) {
@@ -65,15 +63,15 @@
 
     //all totals
     function getCall() {
-      return callB;
+      return callB.toFixed(2);
     }
 
     function getSms() {
-      return smsB;
+      return smsB.toFixed(2);
     }
 
     function totalBills() {
-      return totalB = callB + smsB;
+      return totalB.toFixed(2);
     }
 
     //setting totals
