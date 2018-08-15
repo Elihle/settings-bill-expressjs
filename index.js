@@ -83,7 +83,7 @@ app.get('/actions/:type', function (req, res) {
 app.post('/reset', function (req, res) {
   factory.setCall(0);
   factory.setSms(0);
-  factory.totalBills(0);
+  // factory.totalBills(0);
   factory.clearTimeStamp();
   res.redirect('/');
 });

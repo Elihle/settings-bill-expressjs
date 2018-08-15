@@ -71,6 +71,7 @@
     }
 
     function totalBills() {
+      totalB = callB + smsB;
       return totalB.toFixed(2);
     }
 
