@@ -4,7 +4,6 @@ const bodyParser = require('body-parser');
 const SettingsBill = require('./settingsBill');
 const moment = require('moment');
 
-
 const app = express();
 const factory = SettingsBill();
 
@@ -80,6 +79,19 @@ app.get('/actions/:type', function (req, res) {
   console.log(entered);
   res.render('actions', {stampMap : factory.filter(entered)});
 });
+
+app.post('/reset', function (req, res) {
+  factory.setCall(0);
+  factory.setSms(0);
+  factory.clearTimeStamp();
+  res.redirect('/');
+});
+
+app.post('/back', function (req, res) {
+  res.redirect('/');
+});
+
+
 
 let PORT = process.env.PORT || 3009;
 app.listen(PORT, function () {

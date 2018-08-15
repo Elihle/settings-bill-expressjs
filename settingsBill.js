@@ -93,6 +93,19 @@
       return warningB;
     }
 
+    function setCall(value) {
+      callB = value;
+    }
+
+    function setSms(value) {
+      smsB = value;
+    }
+
+    function clearTimeStamp() {
+      stampMap = [];
+    }
+
+
     function costs() {
       return {
         callCost,
@@ -143,6 +156,9 @@
       getStamps,
       timeStamps,
       filter,
-      setSettings
+      setSettings,
+      setSms,
+      setCall,
+      clearTimeStamp
     }
   }
